@@ -1,0 +1,44 @@
+@use "../../app/globals.scss" as textMixins;
+
+.journal-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: #e1f2f7;
+  padding: 8px;
+  width: 100%;
+
+  .paper-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .paper-description-item {
+    @include textMixins.body-m();
+    display: flex;
+    gap: 8px;
+    &:first-child {
+      border-bottom: 1px solid gray;
+      padding-bottom: 12px;
+    }
+  }
+  .subtitle {
+    @include textMixins.body-m();
+    font-weight: 700;
+    min-width: max-content;
+  }
+
+  .see-more-btn {
+    outline: none;
+    background-color: #67bed9;
+    @include textMixins.body-s();
+    & {
+      color: #e1f2f7;
+    }
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+  }
+}
